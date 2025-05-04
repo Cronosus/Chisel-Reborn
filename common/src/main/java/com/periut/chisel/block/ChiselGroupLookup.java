@@ -147,4 +147,11 @@ public class ChiselGroupLookup {
         }
     }
 
+   public static void clearGroup(String name) {
+      ChiselGroup group = CHISEL_GROUPS.get(name);
+      if (group != null) {
+          group.items.clear();
+          group.tags.clear();
+      }
+   }
 }
